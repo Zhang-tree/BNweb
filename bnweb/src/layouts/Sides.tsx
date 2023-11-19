@@ -9,6 +9,7 @@ import {
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { ContainerQuery } from 'react-container-query'
+// import BnNameDataUpload from  "../app/bnNameCenter/routes/bnNameDataUpload"
 const { Header, Content, Footer, Sider } = Layout;
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -82,7 +83,15 @@ const Side: React.FC = () => {
         </Sider>
         <Layout>
           <Header style={{ padding: 0, background: colorBgContainer }} />
-
+          <Content style={{ margin: '0 16px' }}>
+          <Breadcrumb style={{ margin: '16px 0' }}>
+            <Breadcrumb.Item>User</Breadcrumb.Item>
+            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+          </Breadcrumb>
+          <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
+            {/* <BnNameDataUpload/> */}
+          </div>
+        </Content>
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
         </Layout>
       </Layout>
